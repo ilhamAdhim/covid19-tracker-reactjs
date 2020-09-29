@@ -22,14 +22,17 @@ const HeroSection = ({
   image,
   imagePosition = "right",
 }) => {
+  const jumbotronContainerStyleClass = `d-flex flex-sm-column flex-lg-row h-100 justify-content-center align-items-center`;
+
   const jumbotronContainerStyle = {
     display: "flex",
     alignItems: "center",
-    flexDirection: imagePosition == "right" ? "row" : "row-reverse",
+    justifyContent: "center",
+    flexDirection: imagePosition === "right" ? "row" : "row-reverse",
   };
 
-  const speechBubbleStyleClass = `p-2 flex-item h-50 
-   ${imagePosition == "right" ? "speech-bubble-left" : "speech-bubble-right"}`;
+  const speechBubbleStyleClass = `p-2 flex-item h-50
+  ${imagePosition === "right" ? "speech-bubble-left" : "speech-bubble-right"}`;
 
   const speechBubbleStyle = {
     height: "100%",
@@ -45,21 +48,24 @@ const HeroSection = ({
           /* display="flex"
           flex={imagePosition == "right" ? "row" : "row-reverse"} */
           style={jumbotronContainerStyle}
+          className={jumbotronContainerStyleClass}
         >
           <div className={speechBubbleStyleClass}>
             <div className="ml-4 title-jumbotron" style={{ color: "white" }}>
               <h1 className="display-3 p-4 title">Monitor COVID-19</h1>
-              <p className="lead p-4 latest-update">Latest Update :</p>
+              <p className="lead p-4 latest-update">
+                Latest Update :{new Date().toDateString()}
+              </p>
               <hr className="white" />
               <p className="lead text-center p-2">
                 <a href="#searchProvince">
-                  <button
-                    className="btn btn-indigo"
+                  <MDBBtn
+                    color="indigo"
                     style={{ color: "white" }}
                     id="triggerButton"
                   >
                     Cari Provinsi Anda
-                  </button>
+                  </MDBBtn>
                 </a>
               </p>
             </div>
