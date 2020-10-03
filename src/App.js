@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection';
 import AdviceItem from './components/AdviceItem';
 import FooterElement from './components/FooterElement';
 import SearchBar from './components/SearchBar';
+import CaseNations from './components/CaseNations'
 
 
 //Images
@@ -25,7 +26,7 @@ const App = () => {
         <SearchBar />
 
         <hr />
-
+        <CaseNations defaultNations={['US', 'United Kingdom', 'Brazil']}></CaseNations>
         <hr />
         <Row className="text-center">
           <AdviceItem imageSrc={batukSiku} caption="Gunakan siku ketika batuk atau bersin" />
