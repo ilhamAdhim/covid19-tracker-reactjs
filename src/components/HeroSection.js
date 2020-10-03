@@ -20,6 +20,7 @@ const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage }) => {
             sm="12"
             className="speech-bubble"
             style={{ height: "100%", marginTop: "5em" }}
+            data-aos-delay="1000" data-aos="fade-up"
           >
             <div className="ml-4 title-jumbotron text-white">
               <h1 className="display-3 p-4 title">{topLine}</h1>
@@ -40,7 +41,7 @@ const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage }) => {
               </p>
             </div>
           </Col>
-          <Col md="4" sm="12" className="h-80 p-2">
+          <Col md="4" sm="12" className="h-80 p-2" data-aos="fade-left" data-aos-delay="200">
             <img
               src={image}
               className="img-fluid"

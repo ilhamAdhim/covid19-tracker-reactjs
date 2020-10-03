@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CaseRegion = props => {
+const SearchBar = () => {
     return (
         <div>
 
@@ -8,5 +8,4 @@ const CaseRegion = props => {
     );
 };
 
-
-export default CaseRegion;
+export default SearchBar;
