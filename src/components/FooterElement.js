@@ -12,13 +12,13 @@ function FooterElement(props) {
                         </strong>
                         <ul>
                             <li className="mt-2">API :
-                                <a href="https://gis-kawalcovid19.hub.arcgis.com/search" target="_blank"> Kawal-Covid-ID</a>
+                                <a href="https://gis-kawalcovid19.hub.arcgis.com/search" target="_blank" rel="noopener noreferrer"> Kawal-Covid-ID</a>
                             </li>
                             <li className="mt-2">Icons :
-                                <a href="https://www.flaticon.com/authors/freepik" target="_blank" title="Freepik">Freepik
+                                <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener noreferrer" title="Freepik">Freepik
                                 </a>
                                 from
-                                <a href="https://www.flaticon.com/" target="_blank" title="Flaticon">
+                                <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer" title="Flaticon">
                                     www.flaticon.com
                                 </a>
                             </li>
@@ -27,12 +27,12 @@ function FooterElement(props) {
                     <Col md="2" className="mb-4 mb-lg-0 text-center text-lg-right">
                         <p className="font-weight-bold pb-1 mb-0">
                             <a href="tel:119" target="_blank"
-                                rel="nofollow" style={{ fontSize: "2em" }}>119</a>
+                                rel="noopener noreferrer" style={{ fontSize: "2em" }}>119</a>
                         </p>
-                        <p class="m-0 line-height-2" style={{ fontSize: "2em" }}> <strong> COVID-19 Hotline</strong></p>
+                        <p className="m-0 line-height-2" style={{ fontSize: "2em" }}> <strong> COVID-19 Hotline</strong></p>
                     </Col>
                 </Row>
-                <Row class="mt-4 p-2">
+                <Row className="mt-4 p-2">
                     <Col className="text-center p-4">
                         <strong>
                             Muhammad Ilham Adhim © Copyright 2020. All Rights Reserved.
