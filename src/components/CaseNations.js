@@ -9,8 +9,5 @@ const CaseNations = props => {
     );
 };
 
-CaseNations.propTypes = {
-
-};
 
 export default CaseNations;

@@ -1,25 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import HeroSection from './components/HeroSection';
+import AdviceItem from './components/AdviceItem';
+import FooterElement from './components/FooterElement';
+import SearchBar from './components/SearchBar';
 
-function App() {
+
+//Images
+import batukSiku from './assets/batuk-dengan-siku.png'
+import cuciTangan from './assets/cuci-tangan.png'
+import physicalDistancing from './assets/physical-distancing.png'
+import makanSehat from './assets/makan-sehat.png'
+import tetapBerolahraga from './assets/tetap-berolahraga.png'
+import hindariKeramaian from './assets/hindari-keramaian.png'
+import { Container, Row } from 'react-bootstrap';
+
+
+const App = () => {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HeroSection date={new Date().toDateString()} buttonDesc="Cari Provinsi Anda" topLine="Monitor COVID-19" />
+      <Container>
+        <SearchBar />
+
+        <hr />
+
+        <hr />
+        <Row className="text-center">
+          <AdviceItem imageSrc={batukSiku} caption="Gunakan siku ketika batuk atau bersin" />
+          <AdviceItem imageSrc={cuciTangan} caption="Cuci tangan dengan sabun" />
+          <AdviceItem imageSrc={physicalDistancing} caption="Jaga jarak di area publik" />
+        </Row>
+        <Row className="text-center">
+          <AdviceItem imageSrc={makanSehat} caption="Jaga imunitas tubuh dengan makanan sehat" />
+          <AdviceItem imageSrc={tetapBerolahraga} caption="Rutin berolahraga" />
+          <AdviceItem imageSrc={hindariKeramaian} caption="Gunakan masker" />
+        </Row>
+
+      </Container>
+      <FooterElement />
+    </>
   );
 }
 
