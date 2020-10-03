@@ -54,31 +54,3 @@ const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage }) => {
   );
 };
 export default HeroSection;
-
-// <div class="jumbotron darken-4 jumbotron-fluid shadow-none">
-// <div class="container h-100">
-//     <div class="d-flex flex-sm-column flex-lg-row h-100 justify-content-center align-items-center">
-//         <div class="p-2 speech-bubble flex-fill h-50 " data-aos-delay="1000" data-aos="fade-up">
-//             <div class="ml-4 title-jumbotron text-white">
-//                 <h1 class="display-3 p-4 title">Monitor COVID-19</h1>
-//                 <p class="lead p-4 latest-update">Latest Update :
-//                 </p>
-//                 <hr class="white">
-//                 <p class="lead text-center p-2">
-//                     <a href="#searchProvince">
-//                         <button class="btn btn-indigo text-white" id="triggerButton">
-//                             Cari Provinsi Anda
-//                         </button>
-//                     </a>
-//                 </p>
-//             </div>
-//         </div>
-//         <div class="p-2 flex-fill h-70" data-aos="fade-left" data-aos-delay="200">
-//             <div class="mr-2">
-//                 <img src="./src/assets/medic2.png" style="transform: translate(0px,75px); height: 600px;"
-//                     class="img-fluid doctor-img" alt="Doctor Image">
-//             </div>
-//         </div>
-//     </div>
-// </div>
-// </div>
