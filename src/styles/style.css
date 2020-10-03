@@ -18,34 +18,13 @@ body {
   text-align: center;
 }
 
-.speech-bubble-right {
+.speech-bubble {
   position: relative;
   background: #4e62c6;
   border-radius: 0.4em;
 }
 
-.speech-bubble-right:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 0;
-  height: 0;
-  border: 20px solid transparent;
-  border-right-color: #4e62c6;
-  border-left: 0;
-  border-top: 0;
-  margin-top: -10px;
-  margin-left: -20px;
-}
-
-.speech-bubble-left {
-  position: relative;
-  background: #4e62c6;
-  border-radius: 0.4em;
-}
-
-.speech-bubble-left:after {
+.speech-bubble:after {
   content: "";
   position: absolute;
   right: 0;
@@ -61,14 +40,12 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-  .speech-bubble-right,
-  .speech-bubble-left {
+  .speech-bubble {
     position: relative;
     background: #4e62c6;
     border-radius: 0.4em;
   }
-  .speech-bubble-right:after,
-  .speech-bubble-left:after {
+  .speech-bubble:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -100,4 +77,12 @@ a {
     rgba(218, 218, 218, 1) 72%,
     rgba(255, 255, 255, 1) 95%
   );
+}
+
+footer {
+  background-color: #263238;
+}
+.col {
+  padding: 1rem;
+  text-align: center;
 }
