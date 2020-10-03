@@ -9,7 +9,7 @@ import BrazilFlag from '../assets/brazil-flag-button-round-icon-128.png';
 import USFlag from '../assets/us-flag-button-round-icon-128.png';
 import unitedKingdomFlag from '../assets/united kingdom-flag-button-round-icon-128.png';
 
-const CaseNations = () => {
+const CaseNations = (props) => {
 
     const defaultNations = [{
         name: 'US',
@@ -51,15 +51,20 @@ const CaseNations = () => {
     }, [])
 
     return (
-        <Row>
-            {nations.map((nation) => {
-                return (
-                    <Col sm="12" md="4" >
-                        <CaseNation key={nation.OBJECTID} value={nation[0].attributes} flagIcon={nation.image} />
-                    </Col>
-                )
-            })}
-        </Row>
+        <>
+            <h1 className="text-center mb-4 mt-2">
+                {props.heading}
+            </h1>
+            <Row>
+                {nations.map((nation) => {
+                    return (
+                        <Col sm="12" md="4" >
+                            <CaseNation key={nation.OBJECTID} value={nation[0].attributes} flagIcon={nation.image} />
+                        </Col>
+                    )
+                })}
+            </Row>
+        </>
     );
 };
 

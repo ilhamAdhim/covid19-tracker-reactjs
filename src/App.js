@@ -9,14 +9,8 @@ import CaseNations from './components/CaseNations'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-//Images
-import batukSiku from './assets/batuk-dengan-siku.png'
-import cuciTangan from './assets/cuci-tangan.png'
-import physicalDistancing from './assets/physical-distancing.png'
-import makanSehat from './assets/makan-sehat.png'
-import tetapBerolahraga from './assets/tetap-berolahraga.png'
-import hindariKeramaian from './assets/hindari-keramaian.png'
 import { Container, Row } from 'react-bootstrap';
+import Advices from './components/Advices';
 
 
 const App = () => {
@@ -30,18 +24,9 @@ const App = () => {
         <SearchBar />
 
         <hr />
-        <CaseNations defaultNations={['US', 'United Kingdom', 'Brazil']} data-aos="zoom-out-left"></CaseNations>
+        <CaseNations data-aos="zoom-out-left" heading="Top 3 Global Cases"></CaseNations>
         <hr />
-        <Row className="text-center">
-          <AdviceItem imageSrc={batukSiku} caption="Gunakan siku ketika batuk atau bersin" />
-          <AdviceItem imageSrc={cuciTangan} caption="Cuci tangan dengan sabun" />
-          <AdviceItem imageSrc={physicalDistancing} caption="Jaga jarak di area publik" />
-        </Row>
-        <Row className="text-center">
-          <AdviceItem imageSrc={makanSehat} caption="Jaga imunitas tubuh dengan makanan sehat" />
-          <AdviceItem imageSrc={tetapBerolahraga} caption="Rutin berolahraga" />
-          <AdviceItem imageSrc={hindariKeramaian} caption="Gunakan masker" />
-        </Row>
+        <Advices heading="Sayangi Diri dan Lingkungan Anda" />
 
       </Container>
       <FooterElement />
