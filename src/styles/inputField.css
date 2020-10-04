@@ -1,0 +1,23 @@
+textarea:focus,
+input,
+input:focus {
+  outline: none;
+  border: 0px;
+}
+
+.clear-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 17;
+  cursor: pointer;
+}
+
+.search-container {
+  border: solid 1px #aaa;
+  border-radius: 3;
+  padding: 5px 10px;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
