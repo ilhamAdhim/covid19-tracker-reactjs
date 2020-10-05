@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import HeroSection from './components/HeroSection';
-import AdviceItem from './components/AdviceItem';
 import FooterElement from './components/FooterElement';
 import SearchBar from './components/SearchBar';
 import CaseNations from './components/CaseNations'
@@ -9,20 +8,27 @@ import CaseNations from './components/CaseNations'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import { Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Advices from './components/Advices';
+import TableRegion from './components/TableRegion';
+import { RegionProvider } from './components/RegionContext';
 
 
 const App = () => {
 
-  useEffect(() => AOS.init(), [])
+  useEffect(() => {
+    document.title = "Monitor COVID-19"
+    AOS.init();
+  }, [])
 
   return (
     <>
       <HeroSection date={new Date().toDateString()} buttonDesc="Cari Provinsi Anda" topLine="Monitor COVID-19" />
       <Container data-aos="zoom-out-right">
-        <SearchBar />
-
+        <RegionProvider >
+          <SearchBar />
+          <TableRegion />
+        </RegionProvider>
         <hr />
         <CaseNations data-aos="zoom-out-left" heading="Top 3 Global Cases"></CaseNations>
         <hr />

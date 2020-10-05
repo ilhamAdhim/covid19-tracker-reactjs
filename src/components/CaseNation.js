@@ -2,9 +2,8 @@ import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 
 const CaseNation = (props) => {
-    console.log(props)
     return (
-        <Card className="mb-2">
+        <Card style={{ boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)", marginBottom: "2em" }}>
             <Container className="p-2">
                 <Row>
                     <Col sm="4" className="text-center">
