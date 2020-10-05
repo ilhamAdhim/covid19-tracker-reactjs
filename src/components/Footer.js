@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-function FooterElement(props) {
+function Footer(props) {
     return (
         <footer className="m-0">
             <Container className="text-white">
@@ -44,4 +44,4 @@ function FooterElement(props) {
     );
 }
 
-export default FooterElement;
+export default Footer;
