@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import CaseRegion from './CaseRegion';
 import { RegionContext } from './RegionContext'
 
-const TableRegion = props => {
+const TableRegion = () => {
 
     // List of regions needed to be rendered
     const [regionList, setRegionList] = useContext(RegionContext)
