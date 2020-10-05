@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import HeroSection from './components/HeroSection';
-import FooterElement from './components/FooterElement';
+import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
 import CaseNations from './components/CaseNations'
 
@@ -25,7 +25,7 @@ const App = () => {
     <>
       <HeroSection date={new Date().toDateString()} buttonDesc="Cari Provinsi Anda" topLine="Monitor COVID-19" />
       <Container data-aos="zoom-out-right">
-        <RegionProvider >
+        <RegionProvider heading="Kasus di Indonesia">
           <SearchBar />
           <TableRegion />
         </RegionProvider>
@@ -35,7 +35,7 @@ const App = () => {
         <Advices heading="Sayangi Diri dan Lingkungan Anda" />
 
       </Container>
-      <FooterElement />
+      <Footer />
     </>
   );
 }
