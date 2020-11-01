@@ -37,6 +37,8 @@
     ]
   },
   "devDependencies": {
+    "@types/aos": "^3.0.3",
+    "@types/lodash": "^4.14.164",
     "react-icons": "^3.11.0"
   }
 }

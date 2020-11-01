@@ -10,7 +10,11 @@ import tetapBerolahraga from '../assets/tetap-berolahraga.png'
 import hindariKeramaian from '../assets/hindari-keramaian.png'
 import AdviceItem from './AdviceItem';
 
-const Advices = props => {
+interface IProps{
+    heading : string
+}
+
+const Advices = (props : IProps) => {
     return (
         <>
             <h1 className="text-center mb-4 mt-2">

@@ -5,7 +5,14 @@ import doctorImage from "../assets/medic2.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/style.css";
 
-const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage }) => {
+interface IProps{
+    topLine : string
+    date : string
+    buttonDesc : string
+    image? : string
+}
+
+const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage } : IProps) => {
   const imageStyle = {
     transform: "translate(0px,75px)",
   };

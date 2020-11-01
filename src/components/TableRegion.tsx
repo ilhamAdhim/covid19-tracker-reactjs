@@ -30,7 +30,7 @@ const TableRegion = () => {
                             <b> Sembuh </b>
                         </td>
                     </tr>
-                    {regionList.map(region => {
+                    {regionList.map((region: { Kode_Provi: any; }) => {
                         return <CaseRegion key={region.Kode_Provi} region={region} />
                     })}
                 </tbody>

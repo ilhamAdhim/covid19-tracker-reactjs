@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-function Footer(props) {
+const  Footer = () =>  {
     return (
         <footer className="m-0">
             <Container className="text-white">
