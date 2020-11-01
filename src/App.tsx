@@ -13,15 +13,6 @@ import Advices from './components/Advices';
 import TableRegion from './components/TableRegion';
 import { RegionProvider } from './components/RegionContext';
 
-export type IRegion = {
-
-}
-
-export type INation = {
-  OBJECTID?: string | number | null | undefined;
-  image?: string | undefined;
-}
-
 const App = () => {
 
   useEffect(() => {

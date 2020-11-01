@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react';
 import CaseRegion from './CaseRegion';
 import { RegionContext } from './RegionContext'
+import { IRegion } from './SearchBar';
 
 const TableRegion = () => {
 
     // List of regions needed to be rendered
-    const [regionList, setRegionList] = useContext(RegionContext)
-    console.log(regionList);
-
+    // Unclear type, needs to be fixed
+    const [regionList, setRegionList] = useContext<any>(RegionContext)
     return (
         <>
             <table className="table table-hover mb-4 mt-4">
@@ -30,7 +30,7 @@ const TableRegion = () => {
                             <b> Sembuh </b>
                         </td>
                     </tr>
-                    {regionList.map((region: { Kode_Provi: any; }) => {
+                    {regionList.map((region: IRegion) => {
                         return <CaseRegion key={region.Kode_Provi} region={region} />
                     })}
                 </tbody>

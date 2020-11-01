@@ -5,13 +5,25 @@ import { RegionContext } from "./RegionContext";
 import _ from "lodash";
 import "../styles/inputField.css";
 
+export type IRegion = {
+    Kasus_Meni: number
+    Kasus_Posi: number
+    Kasus_Semb: number
+    Kode_Provi?: number
+    Provinsi?: string
+}
+
+
+
 const SearchBar = () => {
     const [searchInputValue, setSearchInputValue] = useState("");
 
-    const [regionList, setRegionList] = useContext(RegionContext);
+    // Unclear type, needs to be fixed
+    const [regionList, setRegionList] = useContext<any>(RegionContext);
     const [newRegion, setNewRegion] = useState({});
 
-    const handleChange = e => setSearchInputValue(e.target.value);
+    // Unclear type, needs to be fixed
+    const handleChange = (e: any) => setSearchInputValue(e.target.value);
 
     const handleClear = () => setSearchInputValue("");
 
@@ -42,11 +54,12 @@ const SearchBar = () => {
     };
 
     // Update the region List when the search button clicked
-    const addRegion = e => {
+    // Unclear type, needs to be fixed
+    const addRegion = (e: any) => {
         e.preventDefault();
         searchRegion();
 
-        setRegionList((existingRegion) => [
+        setRegionList((existingRegion: IRegion[]) => [
             ...existingRegion, newRegion
         ]);
     };

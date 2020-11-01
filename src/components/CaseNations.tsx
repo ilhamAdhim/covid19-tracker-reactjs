@@ -57,6 +57,7 @@ const CaseNations = (props: IProps) => {
                 let finalResult: INationData[] = []
                 const resAPI = await callAPI();
                 defaultNations.forEach(nationItem => {
+                    // Unclear type, needs to be fixed
                     let country: any = _.filter(resAPI.features, ['attributes.Country_Region', nationItem.name]);
                     country.image = nationItem.imageSrc;
                     finalResult.push(country);

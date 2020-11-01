@@ -1,4 +1,9 @@
 import React from 'react';
+import { IRegion } from "./SearchBar";
+
+type IProps = {
+    region: IRegion
+}
 
 const CaseRegion = (props: IProps) => {
     return (
