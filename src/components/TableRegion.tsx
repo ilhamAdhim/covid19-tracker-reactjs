@@ -7,7 +7,7 @@ const TableRegion = () => {
 
     // List of regions needed to be rendered
     // Unclear type, needs to be fixed
-    const [regionList, setRegionList] = useContext<any>(RegionContext)
+    const regionList = useContext<any>(RegionContext)
     return (
         <>
             <table className="table table-hover mb-4 mt-4">

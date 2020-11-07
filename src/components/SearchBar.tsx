@@ -14,7 +14,6 @@ export type IRegion = {
 }
 
 
-
 const SearchBar = () => {
     const [searchInputValue, setSearchInputValue] = useState("");
 
@@ -22,8 +21,7 @@ const SearchBar = () => {
     const [regionList, setRegionList] = useContext<any>(RegionContext);
     const [newRegion, setNewRegion] = useState({});
 
-    // Unclear type, needs to be fixed
-    const handleChange = (e: any) => setSearchInputValue(e.target.value);
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => setSearchInputValue(e.target.value);
 
     const handleClear = () => setSearchInputValue("");
 
@@ -50,12 +48,9 @@ const SearchBar = () => {
         } catch (error) {
             setNewRegion({})
         }
-
     };
 
-    // Update the region List when the search button clicked
-    // Unclear type, needs to be fixed
-    const addRegion = (e: any) => {
+    const addRegion = (e: React.FormEvent<HTMLElement>) => {
         e.preventDefault();
         searchRegion();
 

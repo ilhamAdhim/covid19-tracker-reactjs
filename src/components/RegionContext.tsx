@@ -7,11 +7,12 @@ interface IProps {
 }
 
 
-export const RegionContext = createContext<IRegion[]>([]);
+export const RegionContext = createContext<IRegion[] | undefined>([]);
 
 export const RegionProvider = (props: IProps) => {
 
     const [regionList, setRegionList] = useState<IRegion[]>([])
+
 
     return (
         <RegionContext.Provider value={regionList}>
