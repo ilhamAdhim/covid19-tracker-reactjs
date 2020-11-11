@@ -11,11 +11,11 @@ export const RegionContext = createContext<IRegion[] | undefined>([]);
 
 export const RegionProvider = (props: IProps) => {
 
-    const [regionList, setRegionList] = useState<IRegion[]>([])
+    const [regionList, setRegionList] = useState<any>([])
 
 
     return (
-        <RegionContext.Provider value={regionList}>
+        <RegionContext.Provider value={[regionList, setRegionList]}>
             <h1 className="text-center mb-4 mt-4 p-2">
                 {props.heading}
             </h1>

@@ -48,6 +48,7 @@ const SearchBar = () => {
         } catch (error) {
             setNewRegion({})
         }
+
     };
 
     const addRegion = (e: React.FormEvent<HTMLElement>) => {
@@ -57,9 +58,8 @@ const SearchBar = () => {
         setRegionList((existingRegion: IRegion[]) => [
             ...existingRegion, newRegion
         ]);
+
     };
-
-
 
     return (
         <Form className="p-2 h-100" onSubmit={addRegion}>

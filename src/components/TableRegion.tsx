@@ -8,6 +8,8 @@ const TableRegion = () => {
     // List of regions needed to be rendered
     // Unclear type, needs to be fixed
     const regionList = useContext<any>(RegionContext)
+    console.log(regionList)
+
     return (
         <>
             <table className="table table-hover mb-4 mt-4">
@@ -30,7 +32,7 @@ const TableRegion = () => {
                             <b> Sembuh </b>
                         </td>
                     </tr>
-                    {regionList.map((region: IRegion) => {
+                    {regionList[0].map((region: IRegion) => {
                         return <CaseRegion key={region.Kode_Provi} region={region} />
                     })}
                 </tbody>
