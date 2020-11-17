@@ -6,16 +6,28 @@ interface IProps {
     heading: string
 }
 
+export interface ContextValue {
+    regionList: IRegion[]
+    addRegion: (newRegion: IRegion) => void
+}
 
-export const RegionContext = createContext<IRegion[] | undefined>([]);
+export const RegionContext = createContext<ContextValue>({ regionList: [], addRegion: () => { } });
 
 export const RegionProvider = (props: IProps) => {
 
-    const [regionList, setRegionList] = useState<any>([])
+    const [regionList, setRegionList] = useState<IRegion[]>([])
+
+    const addRegion = (newRegion: IRegion) => {
+        setRegionList((existingRegion: IRegion[]) => [
+            ...existingRegion, newRegion
+        ]);
+    }
+
+    const contextValue: ContextValue = { regionList, addRegion }
 
 
     return (
-        <RegionContext.Provider value={[regionList, setRegionList]}>
+        <RegionContext.Provider value={contextValue}>
             <h1 className="text-center mb-4 mt-4 p-2">
                 {props.heading}
             </h1>
