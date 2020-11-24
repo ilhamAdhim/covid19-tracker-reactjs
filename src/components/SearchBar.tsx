@@ -71,7 +71,7 @@ const SearchBar = () => {
     };
 
     return (
-        <Form className="p-2 h-100" onSubmit={handleSubmit}>
+        <Form className="p-2 h-100" onSubmit={handleSubmit} id="searchProv">
             <Row className="justify-content-md-center">
                 <Col sm="8" md="6">
                     <div className="search-container" id="cariProvinsi">

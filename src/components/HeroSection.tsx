@@ -5,14 +5,14 @@ import doctorImage from "../assets/medic2.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/style.css";
 
-interface IProps{
-    topLine : string
-    date : string
-    buttonDesc : string
-    image? : string
+interface IProps {
+  topLine: string
+  date: string
+  buttonDesc: string
+  image?: string
 }
 
-const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage } : IProps) => {
+const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage }: IProps) => {
   const imageStyle = {
     transform: "translate(0px,75px)",
   };
@@ -41,6 +41,7 @@ const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage } : IProps
                       backgroundColor: "#3949ab",
                     }}
                     id="triggerButton"
+                    href="#searchProv"
                   >
                     {buttonDesc}
                   </Button>
