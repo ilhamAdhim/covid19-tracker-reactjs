@@ -45,6 +45,33 @@ const CaseNations = (props: IProps) => {
 
     const [nations, setNations] = useState<INationData[]>([]);
 
+    useEffect(() => {
+        // Confirmed, recovered, death data from certain country
+        async function callAPI() {
+            let res = await fetch(`https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/2/query?where=1%3D1&outFields=*&outSR=4326&f=json`)
+            return await res.json();
+        }
+
+        const dataListAllCountry = async () => {
+            try {
+                let finalResult: INationData[] = []
+                const resAPI = await callAPI();
+                defaultNations.forEach(nationItem => {
+                    // Unclear type, needs to be fixed
+                    let country: any = _.filter(resAPI.features, ['attributes.Country_Region', nationItem.name]);
+                    country.image = nationItem.imageSrc;
+                    finalResult.push(country);
+                })
+                setNations(finalResult);
+
+            } catch (message) {
+                console.log("Country is not defined");
+            }
+        }
+
+        dataListAllCountry()
+    }, [])
+
     return (
         <>
             <h1 className="text-center mb-4 mt-2">
