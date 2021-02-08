@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import CaseRegion from './CaseRegion';
 import { ContextValue, RegionContext } from './RegionContext'
 import { IRegion } from './SearchBar';

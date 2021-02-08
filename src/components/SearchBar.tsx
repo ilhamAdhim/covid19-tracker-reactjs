@@ -25,7 +25,7 @@ export type IResponse = {
 const SearchBar = () => {
     const [searchInputValue, setSearchInputValue] = useState("");
 
-    const { regionList, addRegion } = useContext<ContextValue>(RegionContext);
+    const { addRegion } = useContext<ContextValue>(RegionContext);
     const [newRegion, setNewRegion] = useState<IRegion>();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => setSearchInputValue(e.target.value);

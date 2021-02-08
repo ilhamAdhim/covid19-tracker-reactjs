@@ -34,18 +34,16 @@ const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage }: IProps)
               <p className="lead p-4 latest-update">Latest Update : {date}</p>
               <hr style={hrStyle} />
               <p className="lead p-2 text-center">
-                <a href="#searchProvince">
-                  <Button
-                    className="text-white p-3"
-                    style={{
-                      backgroundColor: "#3949ab",
-                    }}
-                    id="triggerButton"
-                    href="#searchProv"
-                  >
-                    {buttonDesc}
-                  </Button>
-                </a>
+                <Button
+                  href="#searchProvince"
+                  className="text-white p-3"
+                  style={{
+                    backgroundColor: "#3949ab",
+                  }}
+                  id="triggerButton"
+                >
+                  {buttonDesc}
+                </Button>
               </p>
             </div>
           </Col>
@@ -54,7 +52,7 @@ const HeroSection = ({ topLine, date, buttonDesc, image = doctorImage }: IProps)
               src={image}
               className="img-fluid"
               style={imageStyle}
-              alt="DoctorImage Image"
+              alt="Doctor"
             />
           </Col>
         </Row>

@@ -26,13 +26,13 @@ const CaseNation = (props: IProps) => {
                 <Card.Body className="p-2" style={{ padding: 0 }}>
                     <Row className="text-center">
                         <Col className="p-2 text-success">
-                            Sembuh  {props.value.Recovered.toLocaleString()}
+                            Sembuh  {props.value.Recovered}
                         </Col>
                         <Col className="p-2 text-warning">
-                            Positif  {props.value.Confirmed.toLocaleString()}
+                            Positif  {props.value.Confirmed}
                         </Col>
                         <Col className="p-2 text-danger">
-                            Meninggal {props.value.Deaths.toLocaleString()}
+                            Meninggal {props.value.Deaths}
                         </Col>
                     </Row>
                 </Card.Body>
